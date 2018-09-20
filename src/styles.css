@@ -1,0 +1,239 @@
+body {
+  background-color: #69bcff;
+  font-family: "Didot";
+  color: white;
+  text-shadow: 0.7px 0.4px #100010;
+  font-weight: bold;
+}
+
+option {
+  font-family: "Didot";
+}
+
+button{
+  border: none;
+  outline: none;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+button:hover{
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+select {
+  opacity: 0.7;
+  margin: 10px;
+  padding: 3 10 3 10;
+  border-radius: 25px;
+  border: 5px;
+  font-size: 13pt;
+  background-color: rgba(256, 256, 256, 0.7);
+  font-family: "Didot";
+  text-align: center;
+}
+
+table {
+  margin: auto;
+}
+
+.select-class {
+
+  width: 200px;
+  height: 35px;
+  overflow-x: auto;
+}
+
+.mainFrame {
+  width: 50%;
+  margin: 0 25%;
+  text-align: center;
+}
+
+.button {
+  border-radius: 20px;
+  border: hidden;
+  background-color: rgba(40, 220, 140, 0.8);
+  font-family: "Times";
+  text-shadow: 0.5px 0.4px #000000;
+  font-weight: bold;
+  margin: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: white;
+  box-shadow: 0.1px 0.2px rgba(40, 220, 140, 1);
+  font-size:20px;
+}
+
+#submit-button {
+  font-family: "Didot";
+  padding: 7px;
+  font-size:20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {
+  font-size: 35px;
+  margin-top: 45px;
+
+}
+
+.label {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+
+#choosingPane{
+  width:480px;
+  height:220px;
+  overflow-y: scroll;
+  margin: auto;
+  margin-top: 45px;
+}
+
+.results-pane {
+  height: 780px;
+  overflow-y: scroll;
+}
+/* the next two blocks make sure that scrollbar actually shows up!*/
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(256,256,256,.5);
+}
+
+#choose-buttons {
+  width:580px;
+  margin-bottom: 25px;
+  text-align: right;
+  height: 50px;
+}
+
+.modal-background {
+  position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+
+   background-color: rgba(0,0,0, 0.3);
+   padding: 50;
+   z-index:1;
+}
+
+.modal-window {
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 400px;
+  min-height: 150px;
+  margin: auto;
+  padding: 30px;
+  vertical-align: middle;
+}
+
+.modal-content {
+  text-align: center;
+  margin: 30px;
+  padding: 30 0 30 0;
+  vertical-align: middle;
+}
+
+#modal-content{
+  color: black;
+  font-size: 20pt;
+}
+
+.schedule-option {
+  color: black;
+  background-color: #e0e0ff;
+  font-weight: normal;
+  border-radius: 15px;
+  width: 380px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  padding: 10px;
+  padding-bottom: 5px;
+  box-shadow: 0 0.0425em 0.1575em 0 rgba(0, 0, 0, 0.8);
+}
+
+
+.card-stack {
+  color: black;
+  background-color: #e0e0ff;
+  font-weight: normal;
+  border-radius: 15px;
+  width: 380px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  padding: 10px;
+  padding-bottom: 5px;
+  padding: 1rem;
+  background-color: #e0e0ff;
+  word-wrap: break-word;
+  box-shadow: 0 0.0625em 0.1875em 0 rgba(0, 0, 0, 0.8), 0 0.70em 0 -0.25em #c0c0ef, 0 0.70em 0.1875em -0.25em rgba(0, 0, 0, 0.8), 0 1.35em 0 -0.5em #c0c0ef,
+   0 1.35em 0.1875em -0.5em rgba(0, 0, 0, 0.8);
+}
+
+.card-stack-small {
+  color: black;
+  background-color: #e0e0ff;
+  font-weight: normal;
+  border-radius: 15px;
+  width: 380px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  padding: 10px;
+  padding-bottom: 5px;
+  padding: 1rem;
+  background-color: #e0e0ff;
+  word-wrap: break-word;
+  box-shadow: 0 0.0625em 0.1875em 0 rgba(0, 0, 0, 0.8), 0 0.70em 0 -0.25em #c0c0ef, 0 0.70em 0.1875em -0.25em rgba(0, 0, 0, 0.8);
+}
+
+.schedule-button {
+  font-size: 12pt;
+  padding: 8px;
+  margin-right: 10px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+
+}
+
+.schedule-item {
+  margin: 4px;
+  font-size: 14pt;
+}
+
+.schedule-item-button {
+  font-family: "Luminari";
+  border-radius: 10px;
+  border: hidden;
+  font-weight: 300;
+  margin-right: 5px;
+  position: relative;
+  bottom: 4px;
+}
+
+.schedule-item-info {
+  font-size: 12pt;
+}
+
+.label-small {
+  font-family: "Ariel";
+  text-shadow: none;
+}
+
+.major-button {
+  padding: 10px;
+  font-size: 14pt;
+  background-color: rgba(0, 180, 120, 1);
+}

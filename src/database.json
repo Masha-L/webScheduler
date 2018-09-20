@@ -1,0 +1,874 @@
+{
+  "subject": [
+  {
+
+    "id": "AFCNA-140",
+
+    "name" : "When People Met Power",
+
+    "department" : "AFCNA" ,
+
+    "fullSemester": true,
+
+    "prerequisites": [],
+
+    "corequisites" : [],
+
+    "credits": 4,
+
+    "types":  ["Humanities", "Multicultural Perspectives"] ,
+
+    "description": "This course traces the long history of political accountability in Africa. How did Africans wrest good governance from their leaders? How did they understand civic virtue and social responsibility? What principles of political logic did kingdoms share with societies without kings and royal women? How did gender contribute to structures of authority? What sources and methods enable us to productively approach a period of time distant from our own?" ,
+
+    "crosslisted": ["HIST-140"],
+
+    "isCrosslisted": true,
+
+    "lectures" : [
+      {
+      "professor" : "Holly Hanson",
+      "timePeriods" : [
+        {
+          "startTime": 9.30,
+          "endTime": 10.45,
+          "weekDay": 1,
+          "biweekly": false
+        },
+        {
+          "startTime": 9.30,
+          "endTime": 10.45,
+          "weekDay": 3,
+          "biweekly": false
+        }
+      ],
+      "name" : "Section1",
+      "location" : "TBD"
+    }
+  ],
+
+  "labs" : []
+  },
+
+  {
+    "id": "AFCNA-181",
+
+    "name" : "Introduction to African Diaspora Religions",
+
+    "department" :  "AFCNA",
+
+    "fullSemester": true,
+
+    "prerequisites": [],
+
+    "corequisites" : [],
+
+    "credits": 4,
+
+    "types":  ["Humanities", "Multicultural Perspectives"] ,
+
+    "description" : "Over the last century, religionists have labored to discover the meaning of African dispersal beyond the continent and its accompanying spiritual lineages. What theories of encounter sufficiently adjudicate the synthetic religious cultures of African-descended persons in North America, South America, and the Caribbean? What are the cross-disciplinary methodologies that scholars utilize to understand African religious cultures in the Western hemisphere? Firstly, this course will introduce the field of Africana religious studies. This background will inform the second and primary objective of the course: thematizing and exploring West and Central African religious traditions housed in the Americas.",
+
+    "crosslisted": ["RELIG-181", "CST-149AD"],
+
+    "isCrosslisted": true,
+
+    "lectures" : [
+      {
+      "professor" : "Meredith F. Coleman-Tobias",
+      "timePeriods" : [
+        {
+          "startTime": 11.00,
+          "endTime": 12.15,
+          "weekDay": 1,
+          "biweekly": false
+        },
+        {
+          "startTime": 11.00,
+          "endTime": 12.15,
+          "weekDay": 3,
+          "biweekly": false
+        }
+      ],
+      "name" : "Lecture 1",
+      "location" : "TBD"
+    }
+  ],
+
+  "labs" : []
+
+  },
+
+  {
+    "id": "BIOCH-311",
+
+    "name" : "Protein Biochemistry and Cellular Metabolism",
+
+    "department" :  "BIOCH",
+
+    "fullSemester": true,
+
+    "prerequisites": ["BIOL-230", "CHEM-302"],
+
+    "corequisites" : ["BIOCH-318"],
+
+    "credits": 4,
+
+    "types":  ["Math & Sciences"] ,
+
+    "description" : "This course is a rigorous introduction to the study of protein molecules and their role as catalysts in the cell. Topics include general principles of protein folding, protein structure-function correlation, enzyme kinetics and mechanism, carbohydrate and lipid biochemistry, and metabolic pathways (catabolic and anabolic) and their interaction and cross-regulation. Biological transformation of energy is considered in light of the principles of thermodynamics." ,
+
+    "crosslisted": ["CHEM-311","BIOL-311"],
+
+    "isCrosslisted": true,
+
+    "lectures" : [
+      {
+      "professor" : "Katherine Berry",
+      "timePeriods" : [
+        {
+          "startTime": 8.30,
+          "endTime": 9.45,
+          "weekDay": 2,
+          "biweekly": false
+        },
+        {
+          "startTime": 8.30,
+          "endTime": 9.45,
+          "weekDay": 4,
+          "biweekly": false
+        },
+        {
+          "startTime": 8.30,
+          "endTime": 9.20,
+          "weekDay": 3,
+          "biweekly": false
+        }
+      ],
+      "name" : "Lecture 1",
+      "location" : "TBD"
+    }
+  ],
+
+  "labs" : []
+  },
+
+  {
+    "id": "BIOL-223",
+
+    "name" : "Ecology" ,
+
+    "department" : "BIOL" ,
+
+    "fullSemester": true,
+
+    "prerequisites": ["BIOL-145 or BIOL-160 and at least one semester of Calculus or Statistics."],
+
+    "corequisites" : ["Lab section"],
+
+    "credits": 4,
+
+    "types":  ["Math & Sciences"],
+
+    "description" : "This course will cover the fundamental factors controlling the distribution and abundance of organisms, including interactions with the abiotic environment, fitness and natural selection, population growth and dynamics, species interactions, community dynamics, and diversity. We will address variation across space and time. The course will combine observational, experimental, and mathematical approaches to some of the applications of ecological theory, including conservation, disease dynamics, and biological control." ,
+
+    "crosslisted": [],
+
+    "isCrosslisted": false,
+
+    "lectures" : [
+      {
+      "professor" : "Martha Hoopes",
+      "timePeriods" : [
+        {
+          "startTime": 9.30,
+          "endTime": 10.45,
+          "weekDay": 1,
+          "biweekly": false
+        },
+        {
+          "startTime": 9.30,
+          "endTime": 10.45,
+          "weekDay": 3,
+          "biweekly": false
+        },
+        {
+          "startTime": 9.30,
+          "endTime": 10.45,
+          "weekDay": 5,
+          "biweekly": false
+        }
+      ],
+      "name" : "Lecture 1",
+      "location" : "TBD"
+    }
+  ],
+
+    "labs" : [
+    {
+      "professor" : "Martha Hoopes; Amy Mays",
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 1,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 1",
+      "location": "Clapp 008"
+    },
+    {
+      "professor" : "Louise Grosslein",
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 2,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 2",
+      "location": "Clapp 008"
+    },
+    {
+      "professor" : "Amy Mays",
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 3,
+          "biweekly": false
+        }
+      ],
+
+      "name": "Lab 3",
+      "location": "Clapp 008"
+    },
+    {
+      "professor" : "Amy Mays",
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 4,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 4",
+      "location": "Clapp 008"
+    }
+  ]
+  },
+
+  {
+    "id": "BIOL-230",
+
+    "name": "Cell and Molecular Biology",
+
+    "department": "BIOL",
+
+    "fullSemester": true,
+
+    "prerequisites": ["BIOL-200", "CHEM-201"],
+
+    "corequisites" : ["Lab section"],
+
+    "credits": 4,
+
+    "types":  ["Math & Sciences"],
+
+    "description": "Cells are the smallest common denominator of life: the simplest organisms are single cells, while others like ourselves are composed of vast communities of cells. In this course, we will learn how cellular structure and function is orchestrated by biological molecules, most notably the genome and the proteins it encodes. Topics will include genetic inheritance, gene and protein regulation, cellular processes including transport, energy capture, and signaling, the cellular and molecular basis for disease, and modern techniques including genomics, bioinformatics, and microscopy. The laboratory component will illustrate and analyze these topics through selected experimental approaches.",
+
+    "crosslisted": [],
+
+    "isCrosslisted": false,
+
+    "lectures" : [
+      {
+      "professor" : "Amy H. Camp, Rebeccah S. Lijek",
+      "timePeriods" : [
+        {
+          "startTime": 11.00,
+          "endTime": 12.15,
+          "weekDay": 1,
+          "biweekly": false
+        },
+        {
+          "startTime": 11.00,
+          "endTime": 12.15,
+          "weekDay": 3,
+          "biweekly": false
+        },
+        {
+          "startTime": 11.00,
+          "endTime": 12.15,
+          "weekDay": 5,
+          "biweekly": false
+        }
+      ],
+      "name" : "Lecture 1",
+      "location" : "TBD"
+    }
+  ],
+
+    "labs" :[
+    {
+      "professor" : "Justyne L. Ogdahl, Alivia L. Price, Amy H. Camp, Rebeccah S. Lijek" ,
+      "timePeriods" : [
+        {
+          "startTime": 13.30 ,
+          "endTime": 16.20,
+          "weekDay": 1,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 1",
+      "location": "Kendade 104"
+    },
+    {
+      "professor" : "Justyne L. Ogdahl, Alivia L. Price, Amy H. Camp, Rebeccah S. Lijek",
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 2,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 2",
+      "location": "Kendade 104"
+
+    },
+    {
+      "professor" : "Justyne L. Ogdahl, Alivia L. Price, Amy H. Camp, Rebeccah S. Lijek",
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 3,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 3",
+      "location": "Kendade 104"
+
+    },
+    {
+      "professor" : "Justyne L. Ogdahl, Alivia L. Price, Amy H. Camp, Rebeccah S. Lijek",
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 4,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 4",
+      "location": "Kendade 104"
+
+    },
+    {
+      "professor" : "Justyne L. Ogdahl, Alivia L. Price, Amy H. Camp, Rebeccah S. Lijek",
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 5,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 5",
+      "location": "Kendade 104"
+
+    }
+  ]
+  },
+
+  {
+    "id": "COMSC-334",
+
+    "name": "Artificial Intelligence",
+
+    "department":  "COMSC",
+
+    "fullSemester": true,
+
+    "prerequisites": "COMSC-211 and MATH-232",
+
+    "corequisites" : [],
+
+    "credits": 4,
+
+    "types":  ["Math & Sciences"] ,
+
+    "description" : "Artificial Intelligence, as a field, has grown from its humble beginnings in science fiction to become one of the broadest fields in computer science, encompassing an incredibly wide array of topics. One of the common threads between these topics is 'How do we build computer systems which exhibit logic and reason?' or rather 'How do we build systems which can solve problems intelligently without resorting to brute force?' We'll cover a few major topics in this course, most notably search, logical reasoning, and planning as well as game playing/theory, uncertain reasoning, and graphical models. This course is programming intensive.",
+
+    "crosslisted": [],
+
+    "isCrosslisted": false,
+
+    "lectures" : [
+      {
+      "professor" : "Lisa A. Ballesteros",
+      "timePeriods" : [
+        {
+          "startTime": 14.55,
+          "endTime": 16.10,
+          "weekDay": 2,
+          "biweekly": false
+        },
+        {
+          "startTime": 14.55,
+          "endTime": 16.10,
+          "weekDay": 4,
+          "biweekly": false
+        }
+      ],
+      "name" : "Lecture 1",
+      "location" : "TBD"
+    }
+  ],
+
+  "labs" : []
+  },
+
+  {
+    "id": "PSYCH-204",
+
+    "name" : "Research Methods in Psychology",
+
+    "department" :  "PSYCH",
+
+    "fullSemester": true,
+
+    "prerequisites": ["PSYCH-201, STAT-240, or STAT-242"],
+
+    "corequisites" : ["Lab Section"],
+
+    "credits": 4,
+
+    "types":  ["Social Sciences"] ,
+
+    "description" : "This course provides an introduction to the skills necessary for becoming good producers and consumers of psychological research. Students learn to develop research questions, survey related literature, design rigorous and ethically sound studies, and collect, analyze, and interpret quantitative and qualitative data. Students build on their computer skills relevant for psychological research and learn to read and critique original empirical journal articles. The course culminates in an original, collaborative research project, a final paper, and an oral presentation.",
+
+    "crosslisted": [],
+
+    "isCrosslisted": false,
+
+    "lectures" : [
+      {
+      "professor" : "Corey E. Flanders",
+      "timePeriods" : [
+        {
+          "startTime": 10.00,
+          "endTime": 11.15,
+          "weekDay": 2,
+          "biweekly": false
+        },
+        {
+          "startTime": 10.00,
+          "endTime": 11.15,
+          "weekDay": 4,
+          "biweekly": false
+        }
+      ],
+      "name" : "Lecture 1",
+      "location" : "TBD"
+    }
+  ],
+
+    "labs" : [
+    {
+      "professor": "Cheryl S. Lavigne" ,
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 1,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 1",
+      "location": "Reese 132"
+
+    },
+    {
+      "professor": "Cheryl S. Lavigne" ,
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 2,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 2",
+      "location": "Reese 132"
+
+    },
+    {
+      "professor": "Cheryl S. Lavigne" ,
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 3,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 3",
+      "location": "Reese 132"
+
+    },
+    {
+      "professor": "Cheryl S. Lavigne" ,
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 4,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 4",
+      "location": "Reese 132"
+
+    },
+    {
+      "professor": "Cheryl S. Lavigne" ,
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 5,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 5",
+      "location": "Reese 132"
+
+    }
+  ]
+  },
+
+  {
+    "id": "COMSC-201",
+
+    "name" : "Advanced Problem-Solving and Elementary Data Structure",
+
+    "department" :  "COMSC",
+
+    "fullSemester": true,
+
+    "prerequisites": ["COMSC-101 with a grade of C or better"],
+
+    "corequisites" : ["Lab section"],
+
+    "credits": 4,
+
+    "types": ["Math & Sciences"],
+
+    "description" : "This course builds on the basic programming concepts learned in Computer Science 101. Emphasis is on developing the skills needed to write more sophisticated programs. This includes strategies to aid in assuring the correctness of programs through the use of assertions and unit testing as well as advanced Java features such as inheritance, polymorphism, and network programming. We will also introduce some widely used data structures such as vectors and linked lists. This course is programming-intensive.",
+
+    "crosslisted": [],
+
+    "isCrosslisted": false,
+
+    "lectures" : [
+      {
+      "professor" : "Valerie B. Barr",
+      "timePeriods" : [
+        {
+          "startTime": 11.00,
+          "endTime": 12.15,
+          "weekDay": 1,
+          "biweekly": false
+        },
+        {
+          "startTime": 11.00,
+          "endTime": 12.15,
+          "weekDay": 3,
+          "biweekly": false
+        }
+      ],
+      "name" : "Lecture 1",
+      "location" : "TBD"
+    },
+    {
+    "professor" : "Heather R. Pon-Barry",
+    "timePeriods" : [
+      {
+        "startTime": 14.55,
+        "endTime": 16.10,
+        "weekDay": 1,
+        "biweekly": false
+      },
+      {
+        "startTime": 14.55,
+        "endTime": 16.10,
+        "weekDay": 3,
+        "biweekly": false
+      }
+    ],
+    "name" : "Lecture 2",
+    "location" : "TBD"
+  }
+  ],
+
+    "labs" : [
+    {
+      "professor" : "Amy L. Tayloe" ,
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 1,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 1" ,
+      "location": "Clapp 202"
+    },
+    {
+      "professor" : "Amy L. Tayloe" ,
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 2,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 2" ,
+      "location": "Clapp 202"
+    },
+    {
+      "professor" : "Amy L. Tayloe" ,
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 4,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 3" ,
+      "location": "Clapp 202"
+    },
+    {
+      "professor" : "Amy L. Tayloe" ,
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 16.20,
+          "weekDay": 5,
+          "biweekly": false
+        }
+      ],
+      "name": "Lab 4" ,
+      "location": "Clapp 202"
+    }
+  ]
+  },
+
+
+
+  {
+    "id": "COMSC-322",
+
+    "name" : "Operating Systems",
+
+    "department" : "COMSC",
+
+    "fullSemester": true,
+
+    "prerequisites": ["COMSC-211 and COMSC-221"],
+
+    "corequisites" : [],
+
+    "credits": 4,
+
+    "types":  ["Math & Sciences"] ,
+
+    "description" : "An introduction to the issues involved in orchestrating the use of computer resources. Topics include operating system evolution, file-handling systems, memory management, virtual memory, resource scheduling, multiprogramming, deadlocks, concurrent processes, protection, and design principles. Course emphasis: understanding the effects of operating system design on computer system performance. This course is programming intensive.",
+
+    "crosslisted": [],
+
+    "isCrosslisted": false,
+
+    "lectures" : [
+      {
+      "professor" : "Yuvraj Singla" ,
+      "timePeriods" : [
+        {
+          "startTime": 13.30,
+          "endTime": 14.45,
+          "weekDay": 2,
+          "biweekly": false
+        },
+        {
+          "startTime": 13.30,
+          "endTime": 14.45,
+          "weekDay": 4,
+          "biweekly": false
+        }
+      ],
+      "name" : "Lecture 1",
+      "location" : "TBD"
+    }
+  ],
+
+  "labs" : []
+  },
+
+  {
+    "id": "COMSC-312",
+
+    "name" : "Algorithms",
+
+    "department" : "COMSC",
+
+    "fullSemester": true,
+
+    "prerequisites": ["COMSC-211 and MATH-232"],
+
+    "corequisites" : [],
+
+    "credits": 4,
+
+    "types":  ["Math & Sciences"],
+
+    "description" : "How does Mapquest find the best route between two locations? How do computers help to decode the human genome? At the heart of these and other complex computer applications are nontrivial algorithms. While algorithms must be specialized to an application, there are some standard ways of approaching algorithmic problems that tend to be useful in many applications. Among other topics, we will explore graph algorithms, greedy algorithms, divide-and-conquer, dynamic programming, and network flow. We will learn to recognize when to apply each of these strategies as well as to evaluate the expected runtime costs of the algorithms we design.",
+
+    "crosslisted": [],
+
+    "isCrosslisted": false,
+
+    "lectures" : [
+      {
+      "professor" : "Daniel Sheldon",
+      "timePeriods" : [
+        {
+          "startTime": 14.55,
+          "endTime": 16.10,
+          "weekDay": 1,
+          "biweekly": false
+        },
+        {
+          "startTime": 14.55,
+          "endTime": 16.10,
+          "weekDay": 3,
+          "biweekly": false
+        },
+        {
+          "startTime": 14.55,
+          "endTime": 15.45,
+          "weekDay": 5,
+          "biweekly": false
+        }
+      ],
+      "name" : "Lecture 1",
+      "location" : "TBD"
+    }
+  ],
+
+  "labs" : []
+
+},
+{
+  "id": "BIOL-311",
+
+  "name" : "Protein Biochemistry and Cellular Metabolism",
+
+  "department" :  "BIOL",
+
+  "fullSemester": true,
+
+  "prerequisites": ["BIOL-230", "CHEM-302"],
+
+  "corequisites" : ["BIOCH-318"],
+
+  "credits": 4,
+
+  "types":  ["Math & Sciences"] ,
+
+  "description" : "This course is a rigorous introduction to the study of protein molecules and their role as catalysts in the cell. Topics include general principles of protein folding, protein structure-function correlation, enzyme kinetics and mechanism, carbohydrate and lipid biochemistry, and metabolic pathways (catabolic and anabolic) and their interaction and cross-regulation. Biological transformation of energy is considered in light of the principles of thermodynamics." ,
+
+  "crosslisted": ["CHEM-311","BIOCH-311"],
+
+  "isCrosslisted": true,
+
+  "lectures" : [
+    {
+    "professor" : "Katherine Berry",
+    "timePeriods" : [
+      {
+        "startTime": 8.30,
+        "endTime": 9.45,
+        "weekDay": 2,
+        "biweekly": false
+      },
+      {
+        "startTime": 8.30,
+        "endTime": 9.45,
+        "weekDay": 4,
+        "biweekly": false
+      },
+      {
+        "startTime": 8.30,
+        "endTime": 9.20,
+        "weekDay": 3,
+        "biweekly": false
+      }
+    ],
+    "name" : "Lecture 1",
+    "location" : "TBD"
+  }
+],
+
+"labs" : []
+},
+{
+  "id": "BIOL-203",
+
+  "name" : "Teaching Children Science: College Students in the Elementary Classroom",
+
+  "department" :  "BIOL",
+
+  "fullSemester": true,
+
+  "prerequisites": ["One year of any college science (in any discipline), at least one lab course."],
+
+  "corequisites" : [],
+
+  "credits": 4,
+
+  "types":  ["Math & Sciences"] ,
+
+  "description" : "This course is designed for science students with interests in teaching and learning with children. It will focus on research, theory and practice pertinent to science education, linking scientific information gained in college classes to children's learning of scientific phenomena. Weekly class meetings (from 1-3 hours) will include laboratory and off-site field investigations. Each student will also become a 'Science Buddy' at a local elementary school, assisting children with hands-on science experiences for at least 1 hour each week.",
+
+  "crosslisted": ["EDUST-203"],
+
+
+  "isCrosslisted": true,
+
+  "lectures" : [
+    {
+    "professor" : "Rachel Fink",
+    "timePeriods" : [
+      {
+        "startTime": 13.30,
+        "endTime": 16.20,
+        "weekDay": 5,
+        "biweekly": false
+      }
+    ],
+    "name" : "Lecture 1",
+    "location" : "Reese 110"
+  }
+],
+
+"labs" : []
+}
+]
+}

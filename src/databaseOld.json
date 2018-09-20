@@ -1,0 +1,163 @@
+{
+  "subject": [
+    {
+      "id" : "BIOL-230",
+
+      "name" : "Cell and Molecular Biology",
+
+      "department" : "BIOL",
+
+      "fullSemester": true,
+
+      "isCrosslisted": false,
+
+      "credits": 4,
+
+      "lectures" : [
+        {
+          "timePeriods" : [
+            {
+              "startTime": 11.00,
+              "endTime": 12.15,
+              "weekDay": 1,
+              "biweekly": false
+            },
+            {
+              "startTime": 11.00,
+              "endTime": 12.15,
+              "weekDay": 3,
+              "biweekly": false
+            },
+            {
+              "startTime": 11.00,
+              "endTime": 12.15,
+              "weekDay": 5,
+              "biweekly": false
+            }
+          ],
+
+          "name" : "Section1"
+        }
+      ],
+
+    "labs" : [
+      {
+        "timePeriods" : [
+          {
+            "startTime": 13.30,
+            "endTime": 16.20,
+            "weekDay": 1,
+            "biweekly": false
+          }
+        ],
+        "name" : "Section1"
+      },
+      {
+        "timePeriods" : [
+          {
+            "startTime": 13.30,
+            "endTime": 16.20,
+            "weekDay": 2,
+            "biweekly": false
+          }
+        ],
+        "name" : "Section2"
+      },
+      {
+        "timePeriods" : [
+          {
+            "startTime": 13.30,
+            "endTime": 16.20,
+            "weekDay": 3,
+            "biweekly": false
+          }
+        ],
+        "name" : "Section3"
+      },
+      {
+        "timePeriods" : [
+          {
+            "startTime": 13.30,
+            "endTime": 16.20,
+            "weekDay": 4,
+            "biweekly": false
+          }
+        ],
+        "name" : "Section4"
+      }
+    ]
+    },
+
+    {
+      "id" : "COMSC-312",
+
+      "name" : "Algorithms",
+
+      "department" : "COMSC",
+
+      "fullSemester": true,
+
+      "isCrosslisted": false,
+
+      "credits": 4,
+
+      "lectures" : [
+        {
+          "timePeriods" : [
+            {
+              "startTime": 14.55,
+              "endTime": 16.10,
+              "weekDay": 1,
+              "biweekly": false
+            },
+            {
+              "startTime": 14.55,
+              "endTime": 16.10,
+              "weekDay": 3,
+              "biweekly": false
+            },
+            {
+              "startTime": 14.55,
+              "endTime": 15.45,
+              "weekDay": 5,
+              "biweekly": false
+            }
+          ],
+          "name" : "Section1"
+        }
+    ],
+
+      "labs" : []
+    },
+
+    {
+      "id" : "BIOL-203",
+
+      "name" : "Teaching Children Science: College Students in the Elementary Classroom",
+
+      "department" : "BIOL",
+
+      "fullSemester": true,
+
+      "isCrosslisted": false,
+
+      "credits": 4,
+
+      "lectures" : [
+        {
+          "timePeriods" : [
+            {
+              "startTime": 13.30,
+              "endTime": 16.20,
+              "weekDay": 5,
+              "biweekly": false
+            }
+          ],
+          "name" : "Section1"
+        }
+    ],
+
+      "labs" : []
+    }
+  ]
+}
