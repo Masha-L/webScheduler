@@ -33,7 +33,7 @@ class NumClasses extends Component {
    }
 
     return (
-      <div>
+      <div className = "choose-num-subjects">
       <label className="label"> How many classes do you want to take? </label>
       <select name = "Choose how many classes you want to take" value={this.state.value} onChange = {
         (event)=> {

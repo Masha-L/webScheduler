@@ -18,7 +18,7 @@ const DataAPI = {
     data.forEach((item, i) => {
       classesTable.set(item.id, item);
     });
-    console.log(classesTable);
+    //console.log(classesTable);
     return classesTable;
   }
 }

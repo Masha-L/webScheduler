@@ -8,18 +8,19 @@ const Solver = {
 
   findSchedules(classes, numClasses) {
     let allNodes = this.classesToNodes(classes);
+    console.log("allNodes: " + allNodes.length);
     this.numClasses = numClasses;
     this.matrixData = Matrix.build(allNodes, numClasses);
     this.traverseGraph([], this.matrixData.chooseFrom, numClasses, 0, 0);
-    console.log(this.matrixData);
-    console.log("matrix");
     const finalSchedules = this.indicesToNodes(allNodes);
+    console.log("finalSchedules: " + finalSchedules.length);
     this.matrixData = {};
     this.scheduleOptions = [];
     this.numClasses = 0;
-    console.log("group");
-    console.log(Grouper.group(finalSchedules));
-    return Grouper.group(finalSchedules);
+    const qwe = Grouper.group(finalSchedules);
+    console.log("grouped(?): " + qwe.length);
+
+    return qwe;
   },
 
   classesToNodes(classes) {

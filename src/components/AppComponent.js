@@ -10,21 +10,26 @@ import Solver from './logic/Solver'
 import ResultsPane from './ResultsPane'
 import '../styles.css'
 
-
+/*
+ * Renders the main component for the choose page.
+ */
 class AppComponent extends Component {
-  //initialize state
+  // Initialize state
   state : {};
 
-  //set state right before rendering this component
+  // Set state right before rendering this component
   componentWillMount()
   {
     /*
     * numChildren - number of children (choice boxes)
     * choices - data from proccessing the form
+    * numClasses - the preset number of classes for the schedule
+    * options - potential schedules
+    * isProcessed - switches between two modes
+    * modal - warning window
     */
     this.setState(
       {
-
         numChildren: 4,
         choices: [],
         numClasses: 4,
@@ -34,26 +39,32 @@ class AppComponent extends Component {
       }
     );
 
-    //сreate map
+    // Create map of all classes
     this.dataTable = DataAPI.createMap(database.subject);
 
   }
 
+  /*
+  * Shows the elements
+  */
   render(){
 
-    //list of subjects (the database)
+    // List of subjects (the database)
     const subjects = database.subject;
-    // we don't want to parse it to much?
+    // The list of the departments
     const departments = DataAPI.findAllDepartments(subjects);
 
-    //list of children nodes
+    // List of children nodes
     const children = [];
     this.setUpChildren(children, subjects, departments);
 
+    //if the form hasn't been processed - show the choice panel
     if(!this.state.isProccessed)
     {  return (
         <div className = "mainFrame">
          {this.state.modal}
+         <div className = "formLink"> Thank you for trying our scheduler out! Please, help us with our study and fill out this quick survey to give us some feedback, so we can make the app even better: <p/><a href="https://goo.gl/forms/oC24Iwsz8m7eGyev2">give feedback</a> <p/> You can also support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_pround">buy us a coffee</a> </div>
+         <div className = "choosingPanel">
          <h1 className = "header">Hi! Let us know what subjects you are considering and we will have some great schedules ready for you right away!</h1>
            <ChoosingPane addChild = {this.onAddChild} deleteChild = {this.onDeleteChild}>
              {children}
@@ -61,13 +72,15 @@ class AppComponent extends Component {
            <NumClasses getNum = {this.onGetNum} />
            <button className = "button" id = "submit-button" type = "submit" onClick = {(event) => {
                this.handleSubmit(event, children)}}>    Get my perfect schedule    </button>
+          </div>
        </div>
       );
     }
     else {
      return(
        <div className = "mainFrame">
-         <ResultsPane addOptions = {this.onAddOptions} goBack = {this.onGoBack} numOptions = {this.state.options.length}>
+       <div className = "formLink"> Thank you for trying our scheduler out! Please, help us with our study and fill out this quick survey to give us some feedback, so we can make the app even better: <p/><a href="https://goo.gl/forms/oC24Iwsz8m7eGyev2">give feedback</a> <p/> You can also support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_pround">buy us a coffee</a> </div>
+           <ResultsPane addOptions = {this.onAddOptions} goBack = {this.onGoBack} numOptions = {this.state.options.length}>
            {children}
          </ResultsPane>
        </div>
@@ -77,50 +90,51 @@ class AppComponent extends Component {
 
 
 
-//логика при нажатии кнопочки
+  //логика при нажатии кнопочки
   handleSubmit(event) {
     //не отправляй на сервер! не перезагружай!
     event.preventDefault();
     //проверь мою форму!
-   const isProccessed = ProccessForm.processForm(this.dataTable, this.state.choices, this.state.numClasses, this.onGetSubjectData, this.onGetModal);
-   //if form was processed ok => send resulting array to logic
-   if(isProccessed){
-     const finalSchedulesGroup = Solver.findSchedules(this.subjectData, this.state.numClasses);
+    const isProccessed = ProccessForm.processForm(this.dataTable, this.state.choices, this.state.numClasses, this.onGetSubjectData, this.onGetModal);
+    //if form was processed ok => send resulting array to logic
+    if (isProccessed) {
+      const finalSchedulesGroup = Solver.findSchedules(this.subjectData, this.state.numClasses);
 
-console.log(finalSchedulesGroup.length);
-     if(finalSchedulesGroup.length < 3)
-      this.setState({numChildren : finalSchedulesGroup.length});
-    else
-      this.setState({numChildren : 3});
+      console.log("appcomp finalSchedules: " + finalSchedulesGroup.length); // gives 9 because is not grouped yet
+
+      if (finalSchedulesGroup.length < 3)
+        this.setState({numChildren : finalSchedulesGroup.length});
+      else
+        this.setState({numChildren : 3});
 
     this.setState({options:finalSchedulesGroup, isProccessed: true});
-  }
-
-}
+   }
+ }
 
 
   setUpChildren = (children, subjects, departments) => {
     //set up children
-    if(!this.state.isProccessed){
+    if (!this.state.isProccessed) {
       for (var i = 0; i < this.state.numChildren; i ++) {
-        children.push(<ChoicePair key={i} number={i} departments = {departments} subjects = {subjects} getChoice = {this.onGetChoice}/>);
+        children.push(<ChoicePair key = {i} number = {i}
+          departments = {departments} subjects = {subjects} getChoice = {this.onGetChoice}/>);
       }}
     else
-      for (i = 0; i < this.state.numChildren; i ++) {
-        console.log(this.state.numChildren);
+      for (i = 0; i < this.state.numChildren; i++) {
+        //console.log(this.state.numChildren);
         children.push(<ScheduleOption key = {i} scheduleGroup = {this.state.options[i]}/>);
       };
   }
 
-//когда пишем плюс - измени колво детей
+// Change the number of children, if "+" was clicked
   onAddChild = () => {
-     if(this.state.numChildren <= 20)
-    this.setState({
-      numChildren: this.state.numChildren + 1
-    });
+    if (this.state.numChildren <= 20)
+      this.setState({
+        numChildren: this.state.numChildren + 1
+      });
   }
 
-//когда пишем минус - измени колво детей
+// Change the number of children, if "-" was clicked
   onDeleteChild = () => {
     if(this.state.numChildren >= 3)
       this.setState({
@@ -152,7 +166,7 @@ console.log(finalSchedulesGroup.length);
         this.setState({numChildren:this.state.options.length});
       }
       else {
-        this.setState({numChildren: this.state.numChildren+4});
+        this.setState({numChildren: this.state.numChildren + 4});
       }
     }
 

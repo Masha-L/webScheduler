@@ -19,10 +19,10 @@ class ScheduleOption extends Component {
     const children = [];
     this.setUpChildren(children);
 
-      if(this.props.scheduleGroup.length>1)
+      if (this.props.scheduleGroup.length > 1)
       {
         this.scheduleClass = "card-stack-small";
-        if(this.props.scheduleGroup.length>2)
+        if (this.props.scheduleGroup.length > 2)
           this.scheduleClass = "card-stack";
       }
       else {

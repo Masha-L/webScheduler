@@ -1,102 +1,72 @@
 body {
-  background-color: #69bcff;
-  font-family: "Didot";
-  color: white;
-  text-shadow: 0.7px 0.4px #100010;
-  font-weight: bold;
-}
-
-option {
-  font-family: "Didot";
-}
-
-button{
-  border: none;
-  outline: none;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
-
-button:hover{
-  background-color: #4CAF50; /* Green */
+  background-color: rgb(0, 72, 118);
+  font-family: 'Open Sans', sans-serif;
   color: white;
 }
 
 select {
   opacity: 0.7;
-  margin: 10px;
-  padding: 3 10 3 10;
+  margin: 8px;
+  padding: 5 10 5 10;
   border-radius: 25px;
   border: 5px;
   font-size: 13pt;
-  background-color: rgba(256, 256, 256, 0.7);
-  font-family: "Didot";
+  background-color: rgba(256, 256, 256, 0.9);
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
 
-table {
-  margin: auto;
-}
-
+/*the subject-department choiceboxes*/
 .select-class {
-
   width: 200px;
-  height: 35px;
+  height: 40px;
   overflow-x: auto;
 }
 
-.mainFrame {
-  width: 50%;
-  margin: 0 25%;
-  text-align: center;
-}
-
-.button {
-  border-radius: 20px;
-  border: hidden;
-  background-color: rgba(40, 220, 140, 0.8);
-  font-family: "Times";
-  text-shadow: 0.5px 0.4px #000000;
-  font-weight: bold;
+button {
+  /*positioning*/
   margin: 15px;
   padding-left: 12px;
   padding-right: 12px;
+
+  /*button look*/
+  border: hidden;
+  border-radius: 20px;
+  outline: none;
+  background-color: lightgrey;
+  box-shadow: 0.1px 0.2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  /*font properties*/
+  color: rgb(1, 50, 81);
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  /*animation properties*/
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+button:hover{
+  background-color: rgb(3, 99, 160);
   color: white;
-  box-shadow: 0.1px 0.2px rgba(40, 220, 140, 1);
-  font-size:20px;
 }
 
 #submit-button {
-  font-family: "Didot";
-  padding: 7px;
+  padding: 15px;
   font-size:20px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
-.header {
-  font-size: 35px;
-  margin-top: 45px;
-
+/*switch colors for buttons on light background*/
+.schedule-item-button, .schedule-button {
+  background-color: rgb(0, 72, 118);
+  color: white;
 }
-
-.label {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-
-#choosingPane{
-  width:480px;
-  height:220px;
-  overflow-y: scroll;
-  margin: auto;
-  margin-top: 45px;
-}
-
-.results-pane {
-  height: 780px;
-  overflow-y: scroll;
+.schedule-item-button:hover, .schedule-button:hover {
+  background-color: lightgrey;
+  color: rgb(1, 50, 81);
 }
 /* the next two blocks make sure that scrollbar actually shows up!*/
 ::-webkit-scrollbar {
@@ -108,11 +78,77 @@ table {
     background-color: rgba(256,256,256,.5);
 }
 
+.mainFrame {
+  width: 80%;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: .5fr 6fr 2fr;
+  grid-gap: 5%;
+  gap: 5%; /*for older versions*/
+}
+
+/*the panel with the header, choice boxes and submit buttons*/
+.choosingPanel {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
+/*the panel with the choice buttons*/
+.choosingPane {
+  grid-column: 2;
+  grid-row: 1;
+  max-height: 250px;
+  overflow-y: scroll;
+/*  margin-right: 10%;*/
+}
+
+.results-pane {
+  text-align: center;
+  grid-column: 2;
+  grid-row: 1;
+  height: 780px;
+  overflow-y: scroll;
+}
+
 #choose-buttons {
   width:580px;
+  margin:auto;
   margin-bottom: 25px;
-  text-align: right;
   height: 50px;
+}
+
+.choose-num-subjects {
+  font-size: 20px;
+  margin:auto;
+}
+
+/*the intro label with "hi..."*/
+.header {
+  width: 90%;
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;;
+  margin: auto;
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+/*the donation and eval form*/
+.formLink {
+  grid-column: 3;
+  grid-row: 1;
+  background-color: rgba(250,256,250, 1);
+  color: black;
+  padding: 30px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 20%;
+  max-width: 200px;
+  min-height: 150px;
 }
 
 .modal-background {
@@ -133,107 +169,179 @@ table {
   max-width: 400px;
   min-height: 150px;
   margin: auto;
+  margin-top: 10%;
+  margin-right: 40%;
   padding: 30px;
-  vertical-align: middle;
 }
 
 .modal-content {
   text-align: center;
+  color: black;
   margin: 30px;
   padding: 30 0 30 0;
   vertical-align: middle;
-}
-
-#modal-content{
-  color: black;
   font-size: 20pt;
 }
 
-.schedule-option {
-  color: black;
-  background-color: #e0e0ff;
-  font-weight: normal;
-  border-radius: 15px;
-  width: 380px;
-  margin: auto;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  padding: 10px;
-  padding-bottom: 5px;
-  box-shadow: 0 0.0425em 0.1575em 0 rgba(0, 0, 0, 0.8);
-}
-
-
-.card-stack {
-  color: black;
-  background-color: #e0e0ff;
-  font-weight: normal;
-  border-radius: 15px;
-  width: 380px;
-  margin: auto;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  padding: 10px;
-  padding-bottom: 5px;
-  padding: 1rem;
-  background-color: #e0e0ff;
-  word-wrap: break-word;
-  box-shadow: 0 0.0625em 0.1875em 0 rgba(0, 0, 0, 0.8), 0 0.70em 0 -0.25em #c0c0ef, 0 0.70em 0.1875em -0.25em rgba(0, 0, 0, 0.8), 0 1.35em 0 -0.5em #c0c0ef,
-   0 1.35em 0.1875em -0.5em rgba(0, 0, 0, 0.8);
-}
-
-.card-stack-small {
-  color: black;
-  background-color: #e0e0ff;
-  font-weight: normal;
-  border-radius: 15px;
-  width: 380px;
-  margin: auto;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  padding: 10px;
-  padding-bottom: 5px;
-  padding: 1rem;
-  background-color: #e0e0ff;
-  word-wrap: break-word;
-  box-shadow: 0 0.0625em 0.1875em 0 rgba(0, 0, 0, 0.8), 0 0.70em 0 -0.25em #c0c0ef, 0 0.70em 0.1875em -0.25em rgba(0, 0, 0, 0.8);
-}
-
+/*"show more" button*/
 .schedule-button {
   font-size: 12pt;
   padding: 8px;
   margin-right: 10px;
   margin-top: 8px;
   margin-bottom: 5px;
-
 }
 
 .schedule-item {
-  margin: 4px;
-  font-size: 14pt;
+  text-align: left;
+  align-items: center;
+  margin-left: 10%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 2fr 9fr;
+  font-size: 13pt;
+}
+.schedule-item-button {
+  height: 30px;
+  width: 30px;
+  line-height: 24px;
+  padding-left: 10px;
+}
+label {
+  vertical-align: middle;
+}
+/*generic schedule option*/
+.schedule-option {
+  color: black;
+  background-color: #c0cADE;
+  font-weight: normal;
+  border-radius: 15px;
+  width: 500px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  padding: 10px;
+  padding-bottom: 5px;
 }
 
-.schedule-item-button {
-  font-family: "Luminari";
-  border-radius: 10px;
-  border: hidden;
-  font-weight: 300;
-  margin-right: 5px;
-  position: relative;
-  bottom: 4px;
+/*for all options where there is more than 3*/
+.card-stack {
+  color: black;
+  font-weight: normal;
+  border-radius: 15px;
+  width: 500px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  padding: 10px;
+  padding-bottom: 5px;
+  padding: 1rem;
+  background-color: #e0e0ff;
+  word-wrap: break-word;
+  box-shadow: 0 0.0625em 0.1895em 0 rgba(256, 256, 256, 1), 0 0.70em 0 -0.25em #c0c0ef, 0 0.70em 0.1875em -0.15em rgba(256, 256, 256, 1), 0 1.35em 0 -0.5em #c0c0ef,
+   0 1.35em 0.1875em -0.4em rgba(256, 256, 256, 1);
+}
+
+/*for schedules with 2 options*/
+.card-stack-small {
+  color: black;
+  background-color: #e0e0ff;
+  font-weight: normal;
+  border-radius: 15px;
+  width: 500px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  padding: 10px;
+  padding-bottom: 5px;
+  padding: 1rem;
+  background-color: #e0e0ff;
+  word-wrap: break-word;
+  box-shadow: 0 0.0625em 0.1875em 0 rgba(256, 256, 256, 1), 0 0.70em 0 -0.25em #c0c0ef, 0 0.70em 0.1875em -0.2em rgba(256, 256, 256, 1);
 }
 
 .schedule-item-info {
+  grid-column: 2;
+  font-family: 'Open Sans', sans-serif;
   font-size: 12pt;
 }
 
-.label-small {
-  font-family: "Ariel";
-  text-shadow: none;
+table {
+  margin-top: 5%;
+  margin-left: 4%;
 }
 
+/*go back button*/
 .major-button {
+  color: rgb(1, 50, 81);
+  background-color: lightgrey;
   padding: 10px;
   font-size: 14pt;
-  background-color: rgba(0, 180, 120, 1);
+
+}
+.major-button:hover {
+  background-color: rgb(3, 99, 160);
+  color: white;
+}
+/*the background for schedules*/
+.schedulePic {
+  position: relative;
+  height: 450px;
+  width: 480px;
+  overflow-y: scroll;
+  background-color: white;
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 8px;
+  display: grid;
+  grid-template-columns: 5px 80px 3px repeat(5, 74px) 5px;
+  grid-template-rows: 7px 25px repeat(16, 23px) 5px;
+  grid-gap: 2px;
+  gap: 2px; /*for older versions*/
+  border-style: dashed;
+  border-width: thin;
+}
+
+.mon, .tue, .wed, .thu, .fri {
+  grid-row: 2;
+  background-color: #00297A;
+  color: white;
+  border-radius: 15px;
+  padding: auto;
+}
+.mon {
+  grid-column-start: 4;
+}
+
+.tue {
+  grid-column-start: 5;
+}
+
+.wed {
+ grid-column-start: 6;
+}
+
+.thu  {
+  grid-column-start: 7;
+}
+
+.fri  {
+  grid-column-start: 8;
+}
+
+.time {
+  grid-column: 2;
+  background-color: #6A0082;
+  color: white;
+  border-radius: 15px;
+}
+
+div.class {
+  font-size: 10px;
+  background-color: #A80257;
+  border-radius: 8px;
+  position: absolute;
+  align-self: center;
+  width: 65px;
+  color: white;
 }

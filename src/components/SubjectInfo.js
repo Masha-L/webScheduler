@@ -85,7 +85,7 @@ class SubjectInfo extends Component {
   }
 
   getTimes(timePeriod){
-    return (timePeriod.startTime.toFixed(2) + " - " + timePeriod.endTime.toFixed(2));
+    return (timePeriod.startTime + " - " + timePeriod.endTime);
 
   }
 

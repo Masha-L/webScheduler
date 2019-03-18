@@ -1,30 +1,54 @@
 const Grouper = {
   groupedOptions: [],
 
+  /*
+   * Groups schedules that have the same elements.
+   * Bruteforce. Think of a more efficient solution later.
+   */
   group(schedules) {
+    let currentNum = 0; 
+    let counter = 0;
+    let masterSchedule;
+    let visited = [];
+    let updated = 0;
 
-    let currentGroup = [];
-    let masterNum = 0, currentNum = 1;
+    for (let i = 0; i < schedules.length; i++) {
+      visited.push(0);
+    }
 
-    if(schedules.length) {
-      currentGroup.push(schedules[masterNum]);
+    while (counter < schedules.length) { 
 
-      while(currentNum < schedules.length)
-      {
-        if(this.compare(schedules[masterNum], schedules[currentNum]))
-          {
-              currentGroup.push(schedules[currentNum]);
+      updated = 0;
+
+      if (!visited[currentNum]) {
+        let currentGroup = [];
+
+        masterSchedule = schedules[currentNum];
+        currentGroup.push(masterSchedule);
+        visited[currentNum] = 1;
+        counter++;
+
+        for (let i = currentNum + 1; i < schedules.length; i++) {
+          if (this.compare(schedules[i], masterSchedule)) {
+            currentGroup.push(schedules[i]); 
+            visited[i] = 1;
+            counter++;
+
+            if (i == currentNum + 1) {
+              currentNum = i;
+              updated = 1;
+            }
           }
-        else {
-          this.groupedOptions.push(Array.from(currentGroup));
-          masterNum = currentNum;
-          currentGroup = [];
-          currentGroup.push(schedules[masterNum]);
         }
+
+        this.groupedOptions.push(currentGroup);     
+      }
+
+      if (!updated) {
         currentNum++;
       }
-      this.groupedOptions.push(currentGroup);
     }
+
     var temp = this.groupedOptions;
     this.groupedOptions = [];
 
@@ -32,18 +56,17 @@ const Grouper = {
   },
 
   compare(a, b) {
-    if(a.length !== b.length)
+    if (a.length !== b.length)
       return false;
 
-    for(var i = 0; i <a.length; i++)
-    {
-      if(a[i].subject.id !== b[i].subject.id)
+    for (var i = 0; i < a.length; i++) {
+      if (a[i].subject.id !== b[i].subject.id) {
         return false;
+      }
     }
 
     return true;
   }
-
 }
 
 export default Grouper;

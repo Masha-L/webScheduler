@@ -4,7 +4,7 @@ import '../styles.css'
 
 const ChoosingPane = props => (
   <div >
-    <div id="choosingPane">
+    <div className="choosingPane">
       {props.children}
     </div>
 

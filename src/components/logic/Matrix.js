@@ -48,7 +48,6 @@ const Matrix = {
   	},
 
   becameInvalid(node, numClasses) {
-
 		if (this.isValid(node)) {
 			let degree = this.vertexDegree(node);
 			if (degree < numClasses) {
@@ -97,11 +96,11 @@ const Matrix = {
 					this.addConflict(row, col);
 				else {
 					nodeTwo = nodes[col];
-					if(this.noNodeConflict(nodeOne, nodeTwo)){
+					if (this.noNodeConflict(nodeOne, nodeTwo)) { // redundant?
 						this.addNoConflict(row, col);
           }
           else {
-            this.addConflict(row, col);
+            this.addConflict(row, col); 
           }
 				}
 			}
@@ -119,7 +118,6 @@ const Matrix = {
   },
 
   noNodeConflict(nodeOne, nodeTwo) {
-
     if (nodeOne.subject.id === nodeTwo.subject.id)
 			return false;
     if (this.noNodeConflictHelper(nodeOne.lecture, nodeTwo.lecture))
@@ -148,10 +146,12 @@ const Matrix = {
   // see TimePeriod.overlaps
   noTPConflict(periodOne, periodTwo) {
     if (periodOne.weekDay === periodTwo.weekDay) {
-      if ((periodOne.startTime <= periodTwo.endTime) && (periodOne.startTime >= periodTwo.startTime))
+      if ((periodOne.startTime <= periodTwo.endTime) && (periodOne.startTime >= periodTwo.startTime)) {
 				return false;
-			if ((periodTwo.endTime <= periodOne.endTime) && (periodTwo.startTime >= periodOne.startTime))
+      }
+			if ((periodTwo.endTime <= periodOne.endTime) && (periodTwo.startTime >= periodOne.startTime)) {
 				return false;
+      }
     }
     return true;
   },
