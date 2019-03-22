@@ -20,7 +20,8 @@ class SubjectInfo extends Component {
   }
 
   render(){
-    this.lecChildren = this.getTimePeriods(this.props.node.lecture.timePeriods);
+    if(this.props.node.lecture)
+      this.lecChildren = this.getTimePeriods(this.props.node.lecture.timePeriods);
     if(this.props.node.lab)
       this.labChildren = this.getTimePeriods(this.props.node.lab.timePeriods);
 
