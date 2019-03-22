@@ -139,6 +139,7 @@ button:hover{
 
 /*the donation and eval form*/
 .formLink {
+  text-align: center;
   grid-column: 3;
   grid-row: 1;
   background-color: rgba(250,256,250, 1);

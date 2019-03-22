@@ -63,7 +63,7 @@ class AppComponent extends Component {
     {  return (
         <div className = "mainFrame">
          {this.state.modal}
-         <div className = "formLink"> Thank you for trying our scheduler out! Please, help us with our study and fill out this quick survey to give us some feedback, so we can make the app even better: <p/><a href="https://goo.gl/forms/oC24Iwsz8m7eGyev2">give feedback</a> <p/> You can also support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_pround">buy us a coffee</a> </div>
+         <div className = "formLink"> The schedule for <br/><b>Fall 2019</b><br/> is now available!<br/> Let the scheduling gods be with you! <p/> You can support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_pround">buy us a coffee</a> </div>
          <div className = "choosingPanel">
          <h1 className = "header">Hi! Let us know what subjects you are considering and we will have some great schedules ready for you right away!</h1>
            <ChoosingPane addChild = {this.onAddChild} deleteChild = {this.onDeleteChild}>
@@ -79,7 +79,7 @@ class AppComponent extends Component {
     else {
      return(
        <div className = "mainFrame">
-       <div className = "formLink"> Thank you for trying our scheduler out! Please, help us with our study and fill out this quick survey to give us some feedback, so we can make the app even better: <p/><a href="https://goo.gl/forms/oC24Iwsz8m7eGyev2">give feedback</a> <p/> You can also support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_pround">buy us a coffee</a> </div>
+       <div className = "formLink"> The schedule for <br/><b>Fall 2019</b><br/> is now available!<br/> Let the scheduling gods be with you! <p/> You can support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_pround">buy us a coffee</a> </div>
            <ResultsPane addOptions = {this.onAddOptions} goBack = {this.onGoBack} numOptions = {this.state.options.length}>
            {children}
          </ResultsPane>
