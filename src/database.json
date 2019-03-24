@@ -1144,7 +1144,7 @@
                         }
                     ],
                     "name": "Lecture 01",
-                    "location": "25 Morgan Street 006"
+                    "location": "Central Services 211"
                 }
             ],
             "labs": []
@@ -2057,6 +2057,23 @@
             "labs": []
         },
         {
+            "id": "BIOCH-295",
+            "name": "BIOCH-295: Independent Study",
+            "department": "Biochemistry",
+            "credits": 0,
+            "crosslisted": "",
+            "isCrosslisted": false,
+            "lectures": [
+                {
+                    "professor": "Craig Woodard",
+                    "timePeriods": [],
+                    "name": "Lecture 01",
+                    "location": ""
+                }
+            ],
+            "labs": []
+        },
+        {
             "id": "BIOCH-311",
             "name": "BIOCH-311: Protein Bioch/Cell Metb w/Lab",
             "department": "Biochemistry",
@@ -2179,6 +2196,23 @@
                     ],
                     "name": "Lecture 03",
                     "location": "Carr 108"
+                }
+            ],
+            "labs": []
+        },
+        {
+            "id": "BIOCH-395",
+            "name": "BIOCH-395: Independent Study",
+            "department": "Biochemistry",
+            "credits": 0,
+            "crosslisted": "",
+            "isCrosslisted": false,
+            "lectures": [
+                {
+                    "professor": "Craig Woodard",
+                    "timePeriods": [],
+                    "name": "Lecture 01",
+                    "location": ""
                 }
             ],
             "labs": []
@@ -2600,6 +2634,23 @@
             ]
         },
         {
+            "id": "BIOL-295",
+            "name": "BIOL-295: Independent Study",
+            "department": "Biological Sciences",
+            "credits": 0,
+            "crosslisted": "",
+            "isCrosslisted": false,
+            "lectures": [
+                {
+                    "professor": "Craig Woodard",
+                    "timePeriods": [],
+                    "name": "Lecture 01",
+                    "location": ""
+                }
+            ],
+            "labs": []
+        },
+        {
             "id": "BIOL-305",
             "name": "BIOL-305: Cellular & Molecular Develop.",
             "department": "Biological Sciences",
@@ -2887,6 +2938,23 @@
                             "biweekly": false
                         }
                     ],
+                    "name": "Lecture 01",
+                    "location": ""
+                }
+            ],
+            "labs": []
+        },
+        {
+            "id": "BIOL-395",
+            "name": "BIOL-395: Independent Study",
+            "department": "Biological Sciences",
+            "credits": 0,
+            "crosslisted": "",
+            "isCrosslisted": false,
+            "lectures": [
+                {
+                    "professor": "Craig Woodard",
+                    "timePeriods": [],
                     "name": "Lecture 01",
                     "location": ""
                 }
@@ -3247,14 +3315,14 @@
                     "professor": "Jonathan Ashby",
                     "timePeriods": [
                         {
-                            "startTime": "11.30",
-                            "endTime": "12.45",
+                            "startTime": "10.00",
+                            "endTime": "11.15",
                             "weekDay": 2,
                             "biweekly": false
                         },
                         {
-                            "startTime": "11.30",
-                            "endTime": "12.45",
+                            "startTime": "10.00",
+                            "endTime": "11.15",
                             "weekDay": 4,
                             "biweekly": false
                         },
@@ -3465,6 +3533,36 @@
             "labs": []
         },
         {
+            "id": "CHEM-317",
+            "name": "CHEM-317: Princ. of Polymer Chemistry",
+            "department": "Chemistry",
+            "credits": 4,
+            "crosslisted": "",
+            "isCrosslisted": false,
+            "lectures": [
+                {
+                    "professor": "Wei Chen",
+                    "timePeriods": [
+                        {
+                            "startTime": "13.30",
+                            "endTime": "14.45",
+                            "weekDay": 1,
+                            "biweekly": false
+                        },
+                        {
+                            "startTime": "13.30",
+                            "endTime": "14.45",
+                            "weekDay": 3,
+                            "biweekly": false
+                        }
+                    ],
+                    "name": "Lecture 01",
+                    "location": ""
+                }
+            ],
+            "labs": []
+        },
+        {
             "id": "CHEM-328",
             "name": "CHEM-328: Bridging Science/Engineering",
             "department": "Chemistry",
@@ -3532,14 +3630,14 @@
                     "professor": "Wei Chen",
                     "timePeriods": [
                         {
-                            "startTime": "13.30",
-                            "endTime": "14.45",
+                            "startTime": "09.30",
+                            "endTime": "10.45",
                             "weekDay": 1,
                             "biweekly": false
                         },
                         {
-                            "startTime": "13.30",
-                            "endTime": "14.45",
+                            "startTime": "09.30",
+                            "endTime": "10.45",
                             "weekDay": 3,
                             "biweekly": false
                         }
@@ -4928,7 +5026,20 @@
             "lectures": [
                 {
                     "professor": "Instructor To Be Announced",
-                    "timePeriods": [],
+                    "timePeriods": [
+                        {
+                            "startTime": "14.55",
+                            "endTime": "16.10",
+                            "weekDay": 1,
+                            "biweekly": false
+                        },
+                        {
+                            "startTime": "14.55",
+                            "endTime": "16.10",
+                            "weekDay": 3,
+                            "biweekly": false
+                        }
+                    ],
                     "name": "Lecture 01",
                     "location": "Kendall Hall/Sports Complex STTH"
                 }
@@ -5094,27 +5205,10 @@
             "isCrosslisted": false,
             "lectures": [
                 {
-                    "professor": "Rose Flachs",
+                    "professor": "Instructor To Be Announced;Rose Flachs",
                     "timePeriods": [],
                     "name": "Lecture 01",
                     "location": ""
-                }
-            ],
-            "labs": []
-        },
-        {
-            "id": "DANCE-305HP",
-            "name": "DANCE-305HP: Repertory: Hip Hop",
-            "department": "Dance",
-            "credits": 2,
-            "crosslisted": "",
-            "isCrosslisted": false,
-            "lectures": [
-                {
-                    "professor": "Shakia Johnson",
-                    "timePeriods": [],
-                    "name": "Lecture 01",
-                    "location": "Kendall Hall/Sports Complex STTH"
                 }
             ],
             "labs": []
@@ -5128,7 +5222,7 @@
             "isCrosslisted": false,
             "lectures": [
                 {
-                    "professor": "Rose Flachs;Charles Flachs",
+                    "professor": "Rose Flachs",
                     "timePeriods": [],
                     "name": "Lecture 01",
                     "location": ""
@@ -6915,38 +7009,6 @@
                     ],
                     "name": "Lecture 01",
                     "location": ""
-                }
-            ],
-            "labs": []
-        },
-        {
-            "id": "FLMST-320CM",
-            "name": "FLMST-320CM: Contemporary Masculinities",
-            "department": "Film Studies",
-            "credits": 4,
-            "crosslisted": [
-                "108687"
-            ],
-            "isCrosslisted": true,
-            "lectures": [
-                {
-                    "professor": "Amy Rodgers",
-                    "timePeriods": [
-                        {
-                            "startTime": "13.30",
-                            "endTime": "16.20",
-                            "weekDay": 3,
-                            "biweekly": false
-                        },
-                        {
-                            "startTime": "19.15",
-                            "endTime": "22.05",
-                            "weekDay": 1,
-                            "biweekly": false
-                        }
-                    ],
-                    "name": "Lecture 01",
-                    "location": ";"
                 }
             ],
             "labs": []
@@ -9747,7 +9809,20 @@
             "lectures": [
                 {
                     "professor": "Instructor To Be Announced",
-                    "timePeriods": [],
+                    "timePeriods": [
+                        {
+                            "startTime": "13.30",
+                            "endTime": "14.45",
+                            "weekDay": 2,
+                            "biweekly": false
+                        },
+                        {
+                            "startTime": "13.30",
+                            "endTime": "14.45",
+                            "weekDay": 4,
+                            "biweekly": false
+                        }
+                    ],
                     "name": "Lecture 01",
                     "location": ""
                 }
@@ -10334,12 +10409,12 @@
             "labs": []
         },
         {
-            "id": "ITAL-341DA",
-            "name": "ITAL-341DA: Global Dante:A Jrny Thru Hell",
+            "id": "ITAL-241DA",
+            "name": "ITAL-241DA: Global Dante:A Jrny Thru Hell",
             "department": "Italian",
             "credits": 4,
             "crosslisted": [
-                "108748"
+                "108753"
             ],
             "isCrosslisted": true,
             "lectures": [
@@ -13387,7 +13462,20 @@
             "lectures": [
                 {
                     "professor": "Instructor To Be Announced;Renae Brodie",
-                    "timePeriods": [],
+                    "timePeriods": [
+                        {
+                            "startTime": "08.30",
+                            "endTime": "09.45",
+                            "weekDay": 2,
+                            "biweekly": false
+                        },
+                        {
+                            "startTime": "08.30",
+                            "endTime": "09.45",
+                            "weekDay": 4,
+                            "biweekly": false
+                        }
+                    ],
                     "name": "Lecture 01",
                     "location": ""
                 }
@@ -13446,6 +13534,23 @@
                     "location": "Clapp Laboratory 111"
                 }
             ]
+        },
+        {
+            "id": "NEURO-295",
+            "name": "NEURO-295: Independent Study",
+            "department": "Neuroscience & Behavior",
+            "credits": 0,
+            "crosslisted": "",
+            "isCrosslisted": false,
+            "lectures": [
+                {
+                    "professor": "Katherine Binder",
+                    "timePeriods": [],
+                    "name": "Lecture 01",
+                    "location": ""
+                }
+            ],
+            "labs": []
         },
         {
             "id": "NEURO-331",
@@ -17424,6 +17529,38 @@
             "labs": []
         },
         {
+            "id": "RELIG-225DA",
+            "name": "RELIG-225DA: Global Dante:A Jrny Thru Hell",
+            "department": "Religion",
+            "credits": 4,
+            "crosslisted": [
+                "108754"
+            ],
+            "isCrosslisted": true,
+            "lectures": [
+                {
+                    "professor": "Martino Lovato",
+                    "timePeriods": [
+                        {
+                            "startTime": "11.00",
+                            "endTime": "12.15",
+                            "weekDay": 1,
+                            "biweekly": false
+                        },
+                        {
+                            "startTime": "11.00",
+                            "endTime": "12.15",
+                            "weekDay": 3,
+                            "biweekly": false
+                        }
+                    ],
+                    "name": "Lecture 01",
+                    "location": ""
+                }
+            ],
+            "labs": []
+        },
+        {
             "id": "RELIG-225ME",
             "name": "RELIG-225ME: Jews&Christians/Medieval Eur.",
             "department": "Religion",
@@ -17512,38 +17649,6 @@
                             "startTime": "11.00",
                             "endTime": "12.15",
                             "weekDay": 5,
-                            "biweekly": false
-                        }
-                    ],
-                    "name": "Lecture 01",
-                    "location": ""
-                }
-            ],
-            "labs": []
-        },
-        {
-            "id": "RELIG-331DA",
-            "name": "RELIG-331DA: Global Dante:A Jrny Thru Hell",
-            "department": "Religion",
-            "credits": 4,
-            "crosslisted": [
-                "108747"
-            ],
-            "isCrosslisted": true,
-            "lectures": [
-                {
-                    "professor": "Martino Lovato",
-                    "timePeriods": [
-                        {
-                            "startTime": "11.00",
-                            "endTime": "12.15",
-                            "weekDay": 1,
-                            "biweekly": false
-                        },
-                        {
-                            "startTime": "11.00",
-                            "endTime": "12.15",
-                            "weekDay": 3,
                             "biweekly": false
                         }
                     ],
@@ -19151,38 +19256,6 @@
                     ],
                     "name": "Lecture 01",
                     "location": "Rooke Theatre BBOX"
-                }
-            ],
-            "labs": []
-        },
-        {
-            "id": "THEAT-350CM",
-            "name": "THEAT-350CM: Contemporary Masculinities",
-            "department": "Theatre Arts",
-            "credits": 4,
-            "crosslisted": [
-                "108285"
-            ],
-            "isCrosslisted": true,
-            "lectures": [
-                {
-                    "professor": "Amy Rodgers",
-                    "timePeriods": [
-                        {
-                            "startTime": "13.30",
-                            "endTime": "16.20",
-                            "weekDay": 3,
-                            "biweekly": false
-                        },
-                        {
-                            "startTime": "19.15",
-                            "endTime": "22.05",
-                            "weekDay": 1,
-                            "biweekly": false
-                        }
-                    ],
-                    "name": "Lecture 01",
-                    "location": ";"
                 }
             ],
             "labs": []

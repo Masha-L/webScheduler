@@ -5,22 +5,48 @@ const Solver = {
   matrixData: {},
   numClasses: 0,
   scheduleOptions: [],
+  // traverseCounter: 0,
+  // completeCounter: 0,
 
   findSchedules(classes, numClasses) {
+    // let start = startTime;
+    // let finish;
+
+    // console.log("for length " + numClasses);
+    // console.log("number of subjects is: " + classes.length);
+
     let allNodes = this.classesToNodes(classes);
-    console.log("allNodes: " + allNodes.length);
+    // console.log("number of nodes: " + allNodes.length);
     this.numClasses = numClasses;
     this.matrixData = Matrix.build(allNodes, numClasses);
+
+    // finish = performance.now();
+    // console.log("matrix built in " + (finish-start).toPrecision(4) + " milliseconds");
+    // start = finish;
+
     this.traverseGraph([], this.matrixData.chooseFrom, numClasses, 0, 0);
+
+    // finish = performance.now();
+    // console.log("graph traversed in " + (finish-start).toPrecision(4) + " milliseconds");
+    // start = finish;
+
     const finalSchedules = this.indicesToNodes(allNodes);
-    console.log("finalSchedules: " + finalSchedules.length);
+
+    // finish = performance.now();
+    // console.log("converted indices to nodes in " + (finish-start).toPrecision(4) + " milliseconds");
+    // console.log("number of schedule options: " + finalSchedules.length);
+    // console.log("total runtime: " + (finish-startTime).toPrecision(4) + " milliseconds");
+    //
+    // console.log("CC: " + this.completeCounter);
+    // console.log("TC: " + this.traverseCounter);
     this.matrixData = {};
     this.scheduleOptions = [];
     this.numClasses = 0;
-    const qwe = Grouper.group(finalSchedules);
-    console.log("grouped(?): " + qwe.length);
-
-    return qwe;
+    const grouped = Grouper.group(finalSchedules);
+    // console.log("number of groups: " + grouped.length);
+    //
+    return grouped;
+    // return finalSchedules;
   },
 
   classesToNodes(classes) {
@@ -70,7 +96,8 @@ const Solver = {
  },
 
  traverseGraph(scheduleArray, optionsArray, leftToAdd, numCycle, startFrom) {
-		if (numCycle < this.numClasses && startFrom < optionsArray.length) {
+    // this.traverseCounter++;
+  	if (numCycle < this.numClasses && startFrom < optionsArray.length) {
 
 			for (var newElm = numCycle; newElm < this.numClasses; newElm++) {
 				for (var nextElm = startFrom; nextElm < optionsArray.length; nextElm++) {
@@ -87,18 +114,17 @@ const Solver = {
 	},
 
   isComplete(schedule, numCycle) {
-
+    // this.completeCounter++;
 		let optionConflicts = this.matrixData.matrix[schedule[numCycle]];
 
 		for (var i = numCycle + 1; i < schedule.length; i++) {
 			// If there is a conflict, returns false
-			if (optionConflicts[schedule[i]] === true)
+			if (optionConflicts[schedule[i]] === true) {
 				return false;
+      }
 		}
 		// If the method hasn't checked all the elements, recursion
 		if (numCycle < schedule.length - 1)
-			return this.isComplete(schedule, numCycle + 1);
-
 		return true;
 	},
 

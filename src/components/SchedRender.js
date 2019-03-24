@@ -9,6 +9,7 @@ class SchedRender extends React.Component {
 
 
     render() {
+      // this.context.keyCounter = 0;
 
       const times = [];
       this.setUpTimes(times);
@@ -28,8 +29,7 @@ class SchedRender extends React.Component {
     }
 
     setUpTimes(times){
-      for (var i = 0; i<16; i++)
-      {
+      for (var i = 0; i < 16; i++) {
         times.push(<label className = "time" style = {{gridRow: i+3}}> {i+7}:00 </label>);
       }
     }
@@ -56,23 +56,17 @@ class SchedRender extends React.Component {
           })
         }
         if(node.lab) {
-          console.log("Hiya!");
           node.lab.timePeriods.forEach((labTP, numLabTP) => {
             const estHeight = this.findHeight(labTP);
             //if height < 16 -> 16
             const height = estHeight < 16 ? 16 : estHeight;
-            console.log("Hi" + height);
             //34, because 1 row + weekDay row height + gap - as a baseline
             //calculations of the distance from the top
             const y = 34 + (this.findY(labTP, height));
-
             classes.push(<div className = "class" style = {{gridColumn: labTP.weekDay+3,top: y, height: height, lineHeight:height/10}}> {node.subject.id} </div>);
           })
         }
-
       })
-
-
   }
 
   findY(timeP, height){

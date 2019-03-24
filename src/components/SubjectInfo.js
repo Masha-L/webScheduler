@@ -20,10 +20,12 @@ class SubjectInfo extends Component {
   }
 
   render(){
-    if(this.props.node.lecture)
+    if(this.props.node.lecture) {
       this.lecChildren = this.getTimePeriods(this.props.node.lecture.timePeriods);
-    if(this.props.node.lab)
+    }
+    if(this.props.node.lab) {
       this.labChildren = this.getTimePeriods(this.props.node.lab.timePeriods);
+    }
 
 
     return (
@@ -34,11 +36,11 @@ class SubjectInfo extends Component {
           (this.state.isOpen)?
               <div className = "schedule-item-info">
                 <p />
-                <label> Professor {this.props.node.lecture.professor} </label>
+                <label> Professor {this.props.node.lecture ? this.props.node.lecture.professor : this.props.node.lab.professor} </label>
                 <p />
                 <div className = "label-small">
                 <label> {this.props.node.subject.id} </label>
-                <label> {this.props.node.lecture.name}</label>
+                <label> {this.props.node.lecture ? this.props.node.lecture.name : null}</label>
                 <div>
                   <table>
                     <tbody>
@@ -104,7 +106,7 @@ class SubjectInfo extends Component {
         return "Fri";
       case 6:
         return "Sat";
-      case 7:
+      default:
         return "Sun";
 
     }

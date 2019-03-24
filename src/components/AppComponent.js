@@ -34,7 +34,7 @@ class AppComponent extends Component {
         choices: [],
         numClasses: 4,
         options: [],
-        isProccessed: false,
+        isProcessed: false,
         modal: null
       }
     );
@@ -59,11 +59,11 @@ class AppComponent extends Component {
     this.setUpChildren(children, subjects, departments);
 
     //if the form hasn't been processed - show the choice panel
-    if(!this.state.isProccessed)
-    {  return (
+    if(!this.state.isProcessed)
+    { return (
         <div className = "mainFrame">
          {this.state.modal}
-         <div className = "formLink"> The schedule for <br/><b>Fall 2019</b><br/> is now available!<br/> Let the scheduling gods be with you! <p/> You can support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_proud">buy us a coffee</a> </div>
+         <div className = "formLink"> Thank you for trying our scheduler out! Please, help us with our study and fill out this quick survey to give us some feedback, so we can make the app even better: <p/><a href="https://goo.gl/forms/oC24Iwsz8m7eGyev2">give feedback</a> <p/> You can also support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_pround">buy us a coffee</a> </div>
          <div className = "choosingPanel">
          <h1 className = "header">Hi! Let us know what subjects you are considering and we will have some great schedules ready for you right away!</h1>
            <ChoosingPane addChild = {this.onAddChild} deleteChild = {this.onDeleteChild}>
@@ -79,7 +79,7 @@ class AppComponent extends Component {
     else {
      return(
        <div className = "mainFrame">
-       <div className = "formLink"> The schedule for <br/><b>Fall 2019</b><br/> is now available!<br/> Let the scheduling gods be with you! <p/> You can support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_proud">buy us a coffee</a> </div>
+       <div className = "formLink"> Thank you for trying our scheduler out! Please, help us with our study and fill out this quick survey to give us some feedback, so we can make the app even better: <p/><a href="https://goo.gl/forms/oC24Iwsz8m7eGyev2">give feedback</a> <p/> You can also support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_pround">buy us a coffee</a> </div>
            <ResultsPane addOptions = {this.onAddOptions} goBack = {this.onGoBack} numOptions = {this.state.options.length}>
            {children}
          </ResultsPane>
@@ -95,33 +95,32 @@ class AppComponent extends Component {
     //не отправляй на сервер! не перезагружай!
     event.preventDefault();
     //проверь мою форму!
-    const isProccessed = ProccessForm.processForm(this.dataTable, this.state.choices, this.state.numClasses, this.onGetSubjectData, this.onGetModal);
+    const isProcessed = ProccessForm.processForm(this.dataTable, this.state.choices, this.state.numClasses, this.onGetSubjectData, this.onGetModal);
     //if form was processed ok => send resulting array to logic
-    if (isProccessed) {
+    if (isProcessed) {
+      // var helluvaClasses = database.subject;
+      // let start = performance.now();
       const finalSchedulesGroup = Solver.findSchedules(this.subjectData, this.state.numClasses);
-
-      console.log("appcomp finalSchedules: " + finalSchedulesGroup.length); // gives 9 because is not grouped yet
+      //const finalSchedulesGroup = Solver.findSchedules(helluvaClasses, this.state.numClasses, start);
 
       if (finalSchedulesGroup.length < 3)
         this.setState({numChildren : finalSchedulesGroup.length});
       else
         this.setState({numChildren : 3});
 
-    this.setState({options:finalSchedulesGroup, isProccessed: true});
+    this.setState({options:finalSchedulesGroup, isProcessed: true});
    }
  }
 
-
   setUpChildren = (children, subjects, departments) => {
     //set up children
-    if (!this.state.isProccessed) {
+    if (!this.state.isProcessed) {
       for (var i = 0; i < this.state.numChildren; i ++) {
         children.push(<ChoicePair key = {i} number = {i}
           departments = {departments} subjects = {subjects} getChoice = {this.onGetChoice}/>);
       }}
     else
       for (i = 0; i < this.state.numChildren; i++) {
-        //console.log(this.state.numChildren);
         children.push(<ScheduleOption key = {i} scheduleGroup = {this.state.options[i]}/>);
       };
   }
@@ -136,7 +135,7 @@ class AppComponent extends Component {
 
 // Change the number of children, if "-" was clicked
   onDeleteChild = () => {
-    if(this.state.numChildren >= 3)
+    if(this.state.numChildren > 3)
       this.setState({
         numChildren: this.state.numChildren - 1
       });
@@ -176,11 +175,8 @@ class AppComponent extends Component {
         choices: [],
         numClasses: 4,
         options: [],
-        isProccessed: false,
+        isProcessed: false,
         modal: null });
     }
-
-
-
 }
 export default AppComponent;

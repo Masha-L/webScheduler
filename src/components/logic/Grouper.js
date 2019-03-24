@@ -6,7 +6,7 @@ const Grouper = {
    * Bruteforce. Think of a more efficient solution later.
    */
   group(schedules) {
-    let currentNum = 0; 
+    let currentNum = 0;
     let counter = 0;
     let masterSchedule;
     let visited = [];
@@ -16,7 +16,7 @@ const Grouper = {
       visited.push(0);
     }
 
-    while (counter < schedules.length) { 
+    while (counter < schedules.length) {
 
       updated = 0;
 
@@ -30,18 +30,18 @@ const Grouper = {
 
         for (let i = currentNum + 1; i < schedules.length; i++) {
           if (this.compare(schedules[i], masterSchedule)) {
-            currentGroup.push(schedules[i]); 
+            currentGroup.push(schedules[i]);
             visited[i] = 1;
             counter++;
 
-            if (i == currentNum + 1) {
+            if (i === currentNum + 1) {
               currentNum = i;
               updated = 1;
             }
           }
         }
 
-        this.groupedOptions.push(currentGroup);     
+        this.groupedOptions.push(currentGroup);
       }
 
       if (!updated) {
