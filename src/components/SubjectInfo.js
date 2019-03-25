@@ -106,9 +106,10 @@ class SubjectInfo extends Component {
         return "Fri";
       case 6:
         return "Sat";
-      default:
+      case 7:
         return "Sun";
-
+      default:
+        return "TBD";
     }
   }
 

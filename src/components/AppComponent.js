@@ -41,22 +41,20 @@ class AppComponent extends Component {
 
     // Create map of all classes
     this.dataTable = DataAPI.createMap(database.subject);
-
+    // List of subjects (the database)
+    this.subjects = database.subject;
+    // The list of the departments
+    this.departments = DataAPI.findAllDepartments(this.subjects);
+    this.savedChoices = [];
   }
 
   /*
   * Shows the elements
   */
   render(){
-
-    // List of subjects (the database)
-    const subjects = database.subject;
-    // The list of the departments
-    const departments = DataAPI.findAllDepartments(subjects);
-
     // List of children nodes
     const children = [];
-    this.setUpChildren(children, subjects, departments);
+    this.setUpChildren(children);
 
     //if the form hasn't been processed - show the choice panel
     if(!this.state.isProcessed)
@@ -80,15 +78,13 @@ class AppComponent extends Component {
      return(
        <div className = "mainFrame">
        <div className = "formLink"> The schedule for <br/><b>Fall 2019</b><br/> is now available!<br/> Let the scheduling gods be with you! <p/> You can support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_proud">buy us a coffee</a> </div>
-           <ResultsPane addOptions = {this.onAddOptions} goBack = {this.onGoBack} numOptions = {this.state.options.length}>
+       <ResultsPane addOptions = {this.onAddOptions} goBack = {this.onGoBack} numOptions = {this.state.options.length}>
            {children}
          </ResultsPane>
        </div>
      );
     }
   }
-
-
 
   //логика при нажатии кнопочки
   handleSubmit(event) {
@@ -99,9 +95,12 @@ class AppComponent extends Component {
     //if form was processed ok => send resulting array to logic
     if (isProcessed) {
       // var helluvaClasses = database.subject;
-      // let start = performance.now();
-      const finalSchedulesGroup = Solver.findSchedules(this.subjectData, this.state.numClasses);
-      //const finalSchedulesGroup = Solver.findSchedules(helluvaClasses, this.state.numClasses, start);
+      // var chosenOnes = [];
+      // for (var i = 0; i < 25; i++)
+      //   chosenOnes.push(helluvaClasses[i]);
+      let start = performance.now();
+
+      const finalSchedulesGroup = Solver.findSchedules(this.subjectData, this.state.numClasses, start);
 
       if (finalSchedulesGroup.length < 3)
         this.setState({numChildren : finalSchedulesGroup.length});
@@ -112,18 +111,20 @@ class AppComponent extends Component {
    }
  }
 
-  setUpChildren = (children, subjects, departments) => {
+  setUpChildren = (children) => {
     //set up children
     if (!this.state.isProcessed) {
       for (var i = 0; i < this.state.numChildren; i ++) {
         children.push(<ChoicePair key = {i} number = {i}
-          departments = {departments} subjects = {subjects} getChoice = {this.onGetChoice}/>);
-      }}
+          departments = {this.departments} subjects = {this.subjects}
+          getChoice = {this.onGetChoice}/>);
+      }
+    }
     else
       for (i = 0; i < this.state.numChildren; i++) {
         children.push(<ScheduleOption key = {i} scheduleGroup = {this.state.options[i]}/>);
       };
-  }
+    }
 
 // Change the number of children, if "+" was clicked
   onAddChild = () => {
@@ -145,7 +146,7 @@ class AppComponent extends Component {
   {
     const currentArr = this.state.choices;
     currentArr[number] = value;
-    this.setState({choices : currentArr})
+    this.setState({choices : currentArr});
   }
 
    onGetNum = (value) => {
@@ -176,7 +177,7 @@ class AppComponent extends Component {
         numClasses: 4,
         options: [],
         isProcessed: false,
-        modal: null });
+        modal: null});
     }
 }
 export default AppComponent;

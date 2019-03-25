@@ -11,8 +11,10 @@ const Matrix = {
 
     this.initializeMatrix();
     this.fillMatrix(nodes);
+    // console.log(this.matrix);
     this.assignValidity(numClasses - 1);
     const validNodes = this.validNodes();
+    // console.log(validNodes);
 
     return {
       matrix: this.matrix,
@@ -92,15 +94,22 @@ const Matrix = {
     for (var row = 0; row < this.matrixSize; row++) {
 			nodeOne = nodes[row];
 			for (var col = row; col < this.matrixSize; col++) {
-				if (row === col)
+				if (row === col) {
 					this.addConflict(row, col);
+          // console.log("added self-conflict for " + row);
+          // console.log("confirmed: " + (this.matrix[row][col] === true));
+        }
 				else {
 					nodeTwo = nodes[col];
 					if (this.noNodeConflict(nodeOne, nodeTwo)) { // redundant?
 						this.addNoConflict(row, col);
+            // console.log("added NO conflict for " + row  + " and " + col);
+            // console.log("confirmed: " + (this.matrix[row][col] === false));
           }
           else {
-            this.addConflict(row, col); 
+            this.addConflict(row, col);
+            // console.log("added conflict for " + row + " and " + col);
+            // console.log("confirmed: " + (this.matrix[row][col] === true));
           }
 				}
 			}
@@ -146,10 +155,12 @@ const Matrix = {
   // see TimePeriod.overlaps
   noTPConflict(periodOne, periodTwo) {
     if (periodOne.weekDay === periodTwo.weekDay) {
-      if ((periodOne.startTime <= periodTwo.endTime) && (periodOne.startTime >= periodTwo.startTime)) {
+      if ((parseFloat(periodOne.startTime).toFixed(2) <= parseFloat(periodTwo.endTime).toFixed(2))
+        && (parseFloat(periodOne.startTime).toFixed(2) >= parseFloat(periodTwo.startTime).toFixed(2))) {
 				return false;
       }
-			if ((periodTwo.endTime <= periodOne.endTime) && (periodTwo.startTime >= periodOne.startTime)) {
+			if ((parseFloat(periodTwo.endTime).toFixed(2) <= parseFloat(periodOne.endTime).toFixed(2))
+        && (parseFloat(periodTwo.startTime).toFixed(2) >= parseFloat(periodOne.startTime).toFixed(2))) {
 				return false;
       }
     }

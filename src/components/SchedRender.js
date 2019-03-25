@@ -52,7 +52,8 @@ class SchedRender extends React.Component {
             const y = 34 + (this.findY(lecTP, height));
 
             //calculations of height   height: 40px; line-height: 40px;
-            classes.push(<div className = "class" style = {{gridColumn: lecTP.weekDay+3, top: y, height: height, lineHeight:height/10}}> {node.subject.id} </div>);
+            if (lecTP.weekDay !== undefined)
+              classes.push(<div className = "class" style = {{gridColumn: lecTP.weekDay+3, top: y, height: height, lineHeight:height/10}}> {node.subject.id} </div>);
           })
         }
         if(node.lab) {
@@ -63,7 +64,8 @@ class SchedRender extends React.Component {
             //34, because 1 row + weekDay row height + gap - as a baseline
             //calculations of the distance from the top
             const y = 34 + (this.findY(labTP, height));
-            classes.push(<div className = "class" style = {{gridColumn: labTP.weekDay+3,top: y, height: height, lineHeight:height/10}}> {node.subject.id} </div>);
+            if (labTP.weekDay !== undefined)
+              classes.push(<div className = "class" style = {{gridColumn: labTP.weekDay+3,top: y, height: height, lineHeight:height/10}}> {node.subject.id} </div>);
           })
         }
       })
