@@ -1,9 +1,10 @@
 {
-  "homepage" : "http://masha-l.github.io/",
+  "homepage": "http://masha-l.github.io/",
   "name": "scheduler",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts": "1.1.5",
