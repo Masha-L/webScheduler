@@ -1,12 +1,13 @@
 {
-  "homepage": "http://masha-l.github.io/",
+  "homepage": "http://masha-l.github.io/moho_scheduler",
   "name": "scheduler",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^2.2.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "1.1.5",
     "svg.js": "^2.7.1"
   },

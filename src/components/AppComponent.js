@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { HashRouter } from "react-router-dom";
+
 import ChoosingPane from './ChoosingPane';
 import ChoicePair from './ChoicePair';
 import database from '../database'
@@ -59,29 +61,33 @@ class AppComponent extends Component {
     //if the form hasn't been processed - show the choice panel
     if(!this.state.isProcessed)
     { return (
-        <div className = "mainFrame">
-         {this.state.modal}
-         <div className = "formLink"> The schedule for <br/><b>Spring 2020</b><br/> is now available!<br/> Let the scheduling gods be with you! <p/> You can support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_proud">buy us a coffee</a> </div>
-         <div className = "choosingPanel">
-         <h1 className = "header">Hi! Let us know what subjects you are considering and we will have some great schedules ready for you right away!</h1>
-           <ChoosingPane addChild = {this.onAddChild} deleteChild = {this.onDeleteChild}>
-             {children}
-           </ChoosingPane>
-           <NumClasses getNum = {this.onGetNum} />
-           <button className = "button" id = "submit-button" type = "submit" onClick = {(event) => {
-               this.handleSubmit(event, children)}}>    Get my perfect schedule    </button>
+        <HashRouter basename='/'>
+          <div className = "mainFrame">
+          {this.state.modal}
+          <div className = "formLink"> The schedule for <br/><b>Spring 2020</b><br/> is now available!<br/> Let the scheduling gods be with you! <p/> You can support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_proud">buy us a coffee</a> </div>
+          <div className = "choosingPanel">
+          <h1 className = "header">Hi! Let us know what subjects you are considering and we will have some great schedules ready for you right away!</h1>
+            <ChoosingPane addChild = {this.onAddChild} deleteChild = {this.onDeleteChild}>
+              {children}
+            </ChoosingPane>
+            <NumClasses getNum = {this.onGetNum} />
+            <button className = "button" id = "submit-button" type = "submit" onClick = {(event) => {
+                this.handleSubmit(event, children)}}>    Get my perfect schedule    </button>
+            </div>
           </div>
-       </div>
+        </HashRouter>
       );
     }
     else {
      return(
-       <div className = "mainFrame">
-       <div className = "formLink"> The schedule for <br/><b>Spring 2020</b><br/> is now available!<br/> Let the scheduling gods be with you! <p/> You can support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_proud">buy us a coffee</a> </div>
-       <ResultsPane addOptions = {this.onAddOptions} goBack = {this.onGoBack} numOptions = {this.state.options.length}>
-           {children}
-         </ResultsPane>
-       </div>
+      <HashRouter basename='/'>
+        <div className = "mainFrame">
+        <div className = "formLink"> The schedule for <br/><b>Spring 2020</b><br/> is now available!<br/> Let the scheduling gods be with you! <p/> You can support us by buying us a coffee (if only you cannot buy us some good night sleep)<p/><a href="https://ko-fi.com/programmers_and_proud">buy us a coffee</a> </div>
+        <ResultsPane addOptions = {this.onAddOptions} goBack = {this.onGoBack} numOptions = {this.state.options.length}>
+            {children}
+          </ResultsPane>
+        </div>
+       </HashRouter>
      );
     }
   }
